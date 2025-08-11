@@ -1,0 +1,719 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #fde0e6;
+  color: #333;
+  line-height: 1.6;
+}
+
+.logo img {
+  width: 50px;
+  /* Resize logo width */
+  height: 50px;
+  /* Resize logo height */
+  animation: spin 5s linear infinite;
+  /* display: inline-block; */
+}
+
+header {
+  background: #fff;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  /* flex-wrap: wrap; */
+  animation-name: fadeintop;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+/* .fixed {
+  position: fixed;
+  border: 2px solid;
+} */
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+
+}
+
+nav a:hover {
+  color: #009688;
+}
+
+.name {
+  background-color: #009688;
+  padding: 16px 10px;
+  color: white;
+  border-radius: 10px;
+  border: 0px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  /* transition: transform 0.2s ease-out; */
+  animation-name: color;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0ms;
+  animation-duration: 3s;
+}
+
+
+.donation {
+  background-color: #009688;
+  padding: 16px 10px;
+  color: white;
+  border-radius: 10px;
+  border: 0px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+
+.donation:hover {
+  transform: scale(1.05);
+  background: #00796b;
+}
+
+.hero {
+  background: url(assets/group-diverse-cheerful-kids.jpg) no-repeat center/cover;
+  /* background-repeat: no-repeat;
+  object-fit: cover; */
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background-blend-mode: color-burn;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-name: fadeInleft;
+  animation-duration: 1s;
+  animation-delay: 0ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.hero h1 {
+  font-size: 37px;
+}
+
+.hero p {
+  margin: 10px 0;
+}
+
+.hero button {
+  padding: 15px 10px;
+  background-color: #009688;
+  color: white;
+  border: 0px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid white;
+  transition: transform 0.2s ease-in;
+}
+
+.hero .vol {
+  background-color: #333;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero button:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+.hero .vol:hover {
+  background: #009688;
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 60px 30px;
+  background: white;
+  animation-name: fadeInDown;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 0ms;
+}
+
+.content .alt {
+  background: #fce4ec;
+}
+
+.text-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  /* flex-wrap: wrap; */
+}
+
+.text-image img {
+  /* width: 50%; */
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+  /* height: 5%; */
+  max-width: 616px;
+  height: 350px;
+}
+
+.text-image img:hover {
+  transform: scale(1.03);
+}
+
+.button2 {
+  background-color: crimson;
+  padding: 16px 10px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  margin-top: 5px;
+}
+
+.button2:hover {
+  background-color: #009688;
+  border: white;
+  transform: translateY(2px);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 0 10px;
+  animation-name: fadeInright;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 0ms;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+.card .apply {
+  padding: 10px;
+  background: #009688;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.apply:hover {
+  background: crimson;
+  transform: skew(10deg);
+}
+
+.vision {
+  text-align: center;
+  margin-bottom: 40px;
+  margin: 30px;
+  animation-name: fadeInleft;
+  animation-duration: 1s;
+  animation-delay: 0ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.vision h2 {
+  margin: 15px;
+}
+
+.text-images {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 40px;
+}
+
+.text-images img {
+  width: 400px;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.4s ease-in;
+}
+
+.text-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.right {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  text-align: left;
+  line-height: 17px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.text1 {
+  transition: transform 0.5s ease-in-out;
+}
+
+.text1:hover {
+  transform: scale(1.009);
+  /* background: #fce4ec; */
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.text2 {
+  transition: transform 0.7s ease-in-out;
+}
+
+.text2:hover {
+  transform: scale(1.009);
+  /* background: #fce4ec; */
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.text3 {
+  transition: transform 0.3s ease;
+}
+
+.text3:hover {
+  transform: scale(1.009);
+  /* background: #fce4ec; */
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.questions {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  margin: 15px 0px 0 0;
+  padding: 15px;
+  background: white;
+  animation-name: fadeInright;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 0ms;
+}
+
+.faq {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.faq-item {
+  background: #fde0e6;
+  padding: 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+
+.faq-item:hover {
+  background: #f8cbd7;
+  transform: scale(1.02);
+}
+
+button {
+  padding: 5px;
+  background: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button.contact:hover {
+  background: #c2185b;
+  transform: scale(1.05);
+}
+
+.conclusion {
+  background: url(assets/annie-spratt-QdK6aujOLYs-unsplash.jpg) no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background-blend-mode: color-burn;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-name: fadeInright;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 0ms;
+}
+
+.links {
+  /* margin-top: 20px; */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: white;
+  /* align-items: center; */
+  animation-name: fadeInUp;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 0ms;
+}
+
+.contact a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.quick-links ul {
+  list-style: none;
+}
+
+.footer-link {
+  color: #004d40;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #009688;
+}
+
+footer {
+  background: #004d40;
+  color: white;
+  /* padding: 40px 30px; */
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+}
+
+/* ANIMATION */
+
+@keyframes fadeintop {
+  from {
+    transform: translateY(-20px);
+    opacity: -5;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInleft {
+  from {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInright {
+  from {
+    opacity: 0;
+    transform: translateX(90px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes color {
+  from {
+    background-color: #009688;
+  }
+
+  to {
+    background-color: crimson;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#overlay {
+  display: none;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 650px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .test {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* OVERLAY */
+  #overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    height: 100vh;
+    width: 70%;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: crimson;
+    padding: 4px;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #00796b;
+    position: relative;
+    height: 200px;
+    width: 100%;
+    z-index: 2;
+    box-shadow: -5px -5px 15px black;
+    /* x, y, boldness, color */
+
+  }
+
+  .container a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+
+  .container a:hover {
+    color: #c3c9c8;
+  }
+
+  nav .main {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.6em;
+  }
+
+  .button {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text-image,
+  .text-images {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .text-image img,
+  .text-images img {
+    width: 100%;
+    height: auto;
+  }
+
+  .right {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .questions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faq {
+    width: 100%;
+  }
+
+  .conclusion {
+    padding: 60px 15px;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 15px;
+  }
+
+  .quick-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .quick-links ul {
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  footer p {
+    margin: 5px 0;
+  }
+
+  .button2,
+  .donation,
+  .name,
+  .apply {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* header {
+    display: none;
+  } */
+  .main {
+    display: none;
+  }
+}
