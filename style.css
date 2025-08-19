@@ -448,10 +448,14 @@ footer {
   justify-content: space-around;
   padding: 5px 0;
 }
+#overlay,#btn{
+  display:none;
+}
+
 
 /* ANIMATION */
 
-@keyframes fadeintop {
+/* @keyframes fadeintop {
   from {
     transform: translateY(-20px);
     opacity: -5;
@@ -541,11 +545,11 @@ footer {
   100% {
     transform: rotate(360deg);
   }
-}
+}*/
 
-#overlay {
+/* #overlay {
   display: none;
-}
+}  */
 
 /* RESPONSIVENESS */
 @media (max-width: 650px) {
