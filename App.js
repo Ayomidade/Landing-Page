@@ -11,3 +11,17 @@ closeBtn.addEventListener("click", (e) => {
   e.preventDefault();
   overlay.style.display = "none";
 });
+
+const faq = document.querySelectorAll(".faq-item");
+
+faq.forEach((element) => {
+  element.lastElementChild.style.display = "none";
+  element.firstElementChild.style.cursor = "pointer";
+});
+
+faq.forEach((elem) => {
+  elem.firstElementChild.addEventListener("click", () => {
+    elem.lastElementChild.style.display =
+      elem.lastElementChild.style.display === "none" ? "block" : "none";
+  });
+});

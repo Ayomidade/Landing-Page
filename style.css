@@ -448,14 +448,16 @@ footer {
   justify-content: space-around;
   padding: 5px 0;
 }
-#overlay,#btn{
-  display:none;
+
+#overlay,
+#btn {
+  display: none;
 }
 
 
 /* ANIMATION */
 
-/* @keyframes fadeintop {
+@keyframes fadeintop {
   from {
     transform: translateY(-20px);
     opacity: -5;
@@ -545,7 +547,7 @@ footer {
   100% {
     transform: rotate(360deg);
   }
-}*/
+}
 
 /* #overlay {
   display: none;
@@ -688,13 +690,12 @@ footer {
   }
 
   .quick-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .quick-links ul {
-    text-align: center;
+    display: none;
   }
 
   footer {
@@ -719,5 +720,9 @@ footer {
   } */
   .main {
     display: none;
+  }
+
+  #btn {
+    display: inline;
   }
 }
